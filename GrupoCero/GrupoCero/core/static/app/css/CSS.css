@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 2;
+    background: #682f97;
+}
+
+.container__menu{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 85px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    *height: 100%;
+    *margin: auto;
+}
+
+
+
+
+
+
+
+
+/*
+nav{
+    height: 100%;
+    display: flex;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav > ul > li{
+    height: 100%;
+    position: relative;
+
+
+    list-style: none;
+    margin-left: 36px;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease;
+
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#c75ddf;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#selected{
+    background: #9132ad;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+*/
+
+
+
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-left: 36px;
+
+
+    
+    position: relative;
+}
+
+.menu ul li a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+
+
+
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+
+nav  ul  li  a:hover{
+    transform: scale(1.1);
+    background:#c75ddf;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+
+#selected{
+    background: #af66c5;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+
+/*COVER*/
+
+.container__cover{
+    width: 100%;
+    height: 800px;
+    background: #9243d3;
+    background: url(IMAGES/purple.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container__cover .text{
+    max-width: 400px;
+
+}
+
+.container__cover .text h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container__cover .text p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.container__cover .text input{
+    padding: 18px 80px;
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 40px;
+    background: #af66c5;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px -12px #af66c5;
+    transition: all 300ms;
+}
+
+.container__cover .text input:hover{
+    box-shadow: 1px 1px 30px -6px #af66c5;    
+}
+
+
+/*IMAGEN FLOTANTE*/
+
+.container__cover .svg img{
+    width: 500px;
+    animation: move-vector 4s linear infinite;
+} 
+
+@keyframes move-vector {
+    0%{
+        transform: translateY(15px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(15px);
+    }
+}
+
+
+/*SUBMENÚ*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #9243d3;
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(0, 0, 0);
+    position: absolute;
+    top: 12;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #0000;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #9132ad;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 720px){
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        background-color: #9132ad;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 300px;
+        transition: all 300ms ease;
+        z-index: 100;
+        *opacity: 0;
+        *visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    } 
+
+    nav > ul > li:hover ul{
+        top: 50px;
+    } 
+
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+}
+
+/*COMPRA Y VENTA DE PINTURAS U OBRAS*/
+.page-ornament__icon {
+    width: 75px;
+    display: inline-block;
+    position: relative;
+    background: #FFFFFF;
+    z-index: 1;
+}
+
+.page-ornament:before {
+    top: 5px;
+}
+::before{
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit
+}
+.page-ornament:before{
+    width: 100%;
+    height: 1px;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: #DDDDDD;
+}
+
+.page-ornament:after {
+    top: 5px;
+}
+::after{
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit
+}
+.page-ornament:after{
+    width: 100%;
+    height: 1px;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: #DDDDDD;
+}
+.page-ornament {
+    font-size: 0;
+    color: #FFFFFF;
+    text-align: center;
+    width: auto;
+    height: 15px;
+    position: absolute;
+    right: 0.9375rem;
+    left: 0.9375rem;
+    background-color: #FFFFFF;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.grid-padding-x>.cell {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+}
+.grid-x>.small-6 {
+    width: 50%;
+}
+.home-shop__block {
+    margin-bottom: 1.875rem;
+}
+.text-right {
+    text-align: right;
+}
+/*NO ME ESTÁ FUNCIONANDO Y DEJA EL BOTÓN A LA IZQUIERDA*/
+.text-left {
+    text-align: left;
+}
+.cell {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    min-height: 0;
+    min-width: 0;
+}
+div{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.home-shop__link {
+    font-size: 0.825rem;
+    font-weight: bold;
+    padding: 0.9375rem 1.5rem;
+}
+.button--black {
+    color: #000000;
+    background: #9132ad;
+}
+.button--upp {
+    text-transform: uppercase;
+}
+.button {
+    font-family: "Raleway", sans-serif !important;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+}
+a{
+    text-decoration: none !important;
+    outline: none !important;
+    transition: all 0.2s linear !important;
+}
+.grid-x>.small-6 {
+    width: 50%;
+}
+.grid-x>.small-6{
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+}
+::after, ::before {
+    box-sizing: inherit;
+}
+.grid-x{
+    -webkit-box-direction: normal;
+}

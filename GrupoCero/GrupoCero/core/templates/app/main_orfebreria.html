@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Orfebreria GZ</title>
+        <link type="text/css" rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container__menu">
+                <div class="logo">
+                    <img src="{%static '/app/img/LOGO.jpg'%}" width="60">
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Menu Principal</a></li>           
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+            <div class="container__cover">
+                <div class="cover">
+                    <div class="text">
+                    <div class="svg">
+
+                        <h1>Orfebreria GZ</h1>
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="../HTML/orfebreria1.html">
+                                        <img src="../Imagenes/orfebreria1.jpg" alt="PP&J" width="300" height="200">
+                                    </a>
+                                </td>
+                                <td>
+                                    <p>Pulsera de plata y jade</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="../HTML/orfebreria2.html">
+                                    <img src="../Imagenes/orfebreria2.jpg" alt="AME" width="300" height="200">
+                                    </a>
+                                </td>
+                                <td>
+                                    <p>Aros de madera etnicos</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="../HTML/orfebreria3.html">
+                                        <img src="../Imagenes/orfebreria3.jpg" alt="AP&P" width="300" height="200">
+                                    </a>
+                                </td>
+                                <td>
+                                    <p>Aretes de plata y perlas</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="../HTML/orfebreria4.html">
+                                        <img src="../Imagenes/orfebreria4.jpg" alt="P7C" width="300" height="200">
+                                    </a>
+                                </td>
+                                <td>
+                                    <p>Pulsera de 7 chakras</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main> 
+    </body>
+</html>

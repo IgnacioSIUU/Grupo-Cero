@@ -1,0 +1,200 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Galería Group Cero</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <!--<tittle> Grupo Cero </tittle>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
+</head>
+<body>
+
+    <header>
+        <div class="container__menu">
+            <div class="logo">
+                <img src="{%static '/app/img/LOGO.jpg'%}" width="60">
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+
+                            <ul>
+                                <li><a href="{% url 'login' %}">Logeate</a></li>
+                                <li><a href="{% url 'registro' %}">Registrarte</a></li>
+                            </ul>
+
+                        <li><a href="#">Menu productos</a>
+                            <ul>
+                                <li><a href="{% url 'main_pinturas' %}">Pinturas</a></li>
+                                <li><a href="{% url 'main_orfebreria' %}">Orfebreria</a></li>
+                                <li><a href="{% url 'main_esculturas' %}">Esculturas</a></li>
+                            </ul>
+                        </li>
+                        {%if user.is_authenticated %}
+                         <li>
+                            <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                         </li>
+                         <li>
+                            <a href="#">Hola, {{user.username}}</a>
+                         </li>
+                        {%else}
+                         <li>
+                            <a href="{% url 'login' %}">Iniciar Sesion</a>
+                         </li>
+                         <li>
+                            <a href="{% url 'registro' %}">Registrate aqui</a>
+                         </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container__cover">
+            <div class="cover">
+                <div class="text">
+                    <h1>Nosotros ayudamos a exhibir las pinturas y demás obras de los artístas </h1>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores voluptatibus eaque adipisci obcaecati eos sint molestias dolorum.
+                    Perferendis, debitis cupiditate!</p>
+
+                    <a href="../HTML/ConoceMas.html"><input type="button" value="CONOCE MÁS"></a>
+
+                </div>
+                
+                <div class="svg">
+                    <img src="../IMAGES/ImgHome.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <section id="home-shop" class="grid-container">
+    </br>
+        <div class="page-ornament  page-ornament--top">
+            ::before
+            <img src="https://galeriapacareu.cl/wp-content/themes/galeria-pacareu/images/icons/icon-ornament.svg" alt="Ornamento Galería Pacareu" class="page-ornament__icon">
+            ::after
+        </div>
+        <div class="page-ornament  page-ornament--bottom">
+            ::before
+            "x"
+            ::after
+        </div>
+    </br>
+        <div class="grid-x  grid-padding-x">
+            <div class="small-12  cell  text-center  home-shop__heading">
+                <h2 class="home-shop__title">¿Tienes algo que quieras vender?</h2>
+                <p class="home-shop__text">¿Buscas algo en particular?</p>
+            </div>
+            
+            <div class="small-6  cell  text-right  home-shop__block  home-shop__block--left">
+                <a href="../HTML/Formulario Compra y Venta.html" class="button  button--black  button--upp  home-shop__link" title="Quiero Vender">Quiero Vender</a>
+                <a href="../HTML/Formulario Compra y Venta.html" class="button  button--black  button--upp  home-shop__link" title="Quiero Comprar">Quiero Comprar</a>
+            </div>
+            <!-- end .home-shop__block--left -->
+                    
+            <div class="page-ornament  page-ornament--top">
+                ::before
+                <img src="https://galeriapacareu.cl/wp-content/themes/galeria-pacareu/images/icons/icon-ornament.svg" alt="Ornamento Galería Pacareu" class="page-ornament__icon">
+                ::after
+            </div>
+            <div class="page-ornament  page-ornament--bottom">
+                ::before
+                "x"
+                ::after
+            </div>
+        </div>
+
+    </section>
+
+
+</br>
+</br>
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
+                aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <a href="{% url 'Inf_imagen2' %}"><center><img src="{% static '/app/img/ultimacena.jpg'%}" ></center></a>
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+    
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>ULTIMA CENA</h1>
+                        <p><a class="btn btn-lg btn-primary" href="../HTML/Inf_imagen2.html">CLICK PARA VER DETALLES</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <a href="../HTML/Inf_imagen.html"><center><img src="../IMAGES/nocheestrellada.jpg" ></center></a>
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+    
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>NOCHE ESTRELLADA</h1>
+                        <p><a class="btn btn-lg btn-primary" href="../HTML/Inf_imagen.html">CLICK PARA VER DETALLES</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="../HTML/Inf_imagen3.html"><center><img src="../IMAGES/venus.jpg" ></center></a>
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+    
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>NACIMIENTO DE VENUS</h1>
+                        <p><a class="btn btn-lg btn-primary" href="../HTML/Inf_imagen3.html">CLICK PARA VER DETALLES</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+</br>
+</br>
+
+<div class="container__cover">
+    <div class="cover">
+        <div class="text">
+            <a href="../HTML/api.html"><input type="button" value="Conoce el clima en tu ubicacion"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

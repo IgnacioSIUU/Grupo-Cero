@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Pintura 2
+        </title>
+
+        <link type="text/css" rel="stylesheet" href="../CSS.css">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    </head> 
+    <body>
+        <header>
+            <div class="container__menu">
+                <div class="logo">
+                    <img src="{%static '/app/img/LOGO.jpg'%}" alt="">
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a class="a" href="{% url 'main_pinturas' %}">Pinturas</a></li>
+                            <li><a href="{% url 'home' %}">Menu principal</a></li>               
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container__cover">
+                <div class="cover">
+                    <div class="textodetalle">
+                    <div class="svg">
+                        <h1>Ultima Cena</h1>
+        <table>
+            
+        <tr>
+            <td rowspan="5">
+                <img src="{%static '/app/img/ultimacena.jpg'%}" alt="Escritorio">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>Historia de la Pintura: "La última cena" es una de las obras más famosas del multifacético Leonardo da Vinci, esta pintura fue realizada </br>
+            entre los años 1495 y 1498.</p>
+            </td>
+        </tr>
+            
+        <tr>
+            <td>
+                <p>Descripción: Representa la escena de la Última Cena de los últimos días de la vida de Jesús de Nazaret según narra el
+            Nuevo Testamento. La pintura está basada en Juan 13:21, en la cual Jesús anuncia que uno de sus doce discípulos le traicionará.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Nombre: "La última cena"</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Precio: $713 Millones de Dólares</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Técnica usada: Esta obra fue realizada con témpera y óleo sobre una preparación de yeso en lugar de la técnica comúnmente utilizada a la época del fresco.</p>
+            </td>
+        </tr>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </main>
+    </body>
+</html>
