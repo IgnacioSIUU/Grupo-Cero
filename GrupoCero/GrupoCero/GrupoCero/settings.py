@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'colorfield',
     'crispy_forms',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -76,6 +77,13 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+            'DEFAULT_AUTHENTICATION_CLASSES': [
+                'rest_framework.authentication.TokenAuthentication',
+            ],
+}
+
 
 WSGI_APPLICATION = 'GrupoCero.wsgi.application'
 
