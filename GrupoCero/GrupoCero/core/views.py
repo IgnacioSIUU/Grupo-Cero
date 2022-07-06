@@ -3,8 +3,14 @@ from .models import Arte
 from .forms import ContactoForm,ArteForm,CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate , login
+from django.contrib.auth.decorators import login_required,permission_required
+from rest_framework import viewsets
+from .serializers import ArteSerializer
+
 
 # Create your views here.
+
+
 
 def home(request):
     artes = Arte.objects.all()
@@ -30,8 +36,14 @@ def contacto(request):
 def main_pinturas(request):
     return render (request,'app/main_pinturas.html')
 
+def Inf_imagen(request):
+    return render (request,'app/Inf_imagen.html')
+
 def Inf_imagen2(request):
     return render (request,'app/Inf_imagen2.html')
+
+def Inf_imagen3(request):
+    return render (request,'app/Inf_imagen3.html')
 
 def main_esculturas(request):
     return render (request,'app/main_esculturas.html')
@@ -45,6 +57,9 @@ def escultura1(request):
 def escultura2(request):
     return render (request,'app/esculturashtmls/escultura2.html')
 
+
+@permission_required('core.add_arte')
+@login_required
 def agregar_arte(request):
     data = {
         'form':ArteForm()
@@ -58,6 +73,7 @@ def agregar_arte(request):
             data["form"] = formulario
     return render(request,'app/artes/agregar.html',data)
 
+@permission_required('core.view_arte')
 def listar_artes(request):
     artes = Arte.objects.all()
 
@@ -66,6 +82,7 @@ def listar_artes(request):
     }
     return render(request,'app/artes/listar.html',data)
 
+@permission_required('core.change_arte')
 def mod_arte(request,id):
     arte = Arte.objects.get(idprod=id)
     data = {
@@ -80,6 +97,7 @@ def mod_arte(request,id):
         data["form"]=formulario
     return render(request,'app/artes/mod.html',data)
 
+@permission_required('core.delete_arte')
 def del_arte(request, id):
     arte = Arte.objects.get(idprod=id)
     arte.delete()
