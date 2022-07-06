@@ -19,6 +19,8 @@ integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEUL
 <style>
     body { background-color: #682f97; }
   </style>
+  <br>
+  <br>
 <div class="row">
     <div class="col-12 col-md-6 offset-md-3">
     <div class="card">
@@ -30,7 +32,12 @@ integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEUL
      {{ form | crispy }}
 
      <br>
-     <button type="submit" id="btnEnviar" class="btn btn-primary">ENVIAR</button>
+     <div class="d-flex justify-content-end">
+          <input type="reset" value="Cancelar" class="btn btn-secondary">
+          &ensp;
+          <button type="submit" id="btnEnviar" class="btn btn-primary">ENVIAR</button>
+     </div>
+
      
 
 </form>
