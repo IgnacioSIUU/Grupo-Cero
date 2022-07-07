@@ -15,11 +15,10 @@ class Categoria(models.Model):
 # Modelo para Arte
 class Arte(models.Model):
   idprod = models.CharField(max_length = 6, primary_key = True, verbose_name = 'Idproducto')
-  nombre = models.CharField(max_length = 20, verbose_name = 'Nombre del arte')
+  nombre = models.CharField(max_length = 20, verbose_name = 'Nombredelarte')
   precio = models.CharField (max_length = 20, null = True, blank = True, verbose_name = 'Precio')
   tecnica = models.CharField (max_length = 20, null = True, blank = True, verbose_name = 'Tecnica')
   autor = models.CharField (max_length = 20, null = True, blank = True, verbose_name = 'Autor')
-  imagen = models.ImageField(upload_to="artes",null=True)
   categoria = models.ForeignKey(Categoria, on_delete = models.PROTECT)
   estado = models.IntegerField()
 

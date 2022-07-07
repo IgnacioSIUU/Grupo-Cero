@@ -24,6 +24,7 @@ urlpatterns = [
     path('',include('core.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('api/',include('core.urls')),
+
 ]
 
 if settings.DEBUG:
