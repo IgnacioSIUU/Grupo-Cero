@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+
+        <title>Orfebrería</title>
+        
+        <link type="text/css" rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="container__menu">
+                <div class="logo">
+                    <img src="{%static '/app/img/LOGO.jpg'%}" width="60">
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a class="a" href="{% url 'main_orfebreria' %}">Orfebreria</a></li>
+                            <li><a href="{% url 'home' %}">Menu principal</a></li>               
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+            <main>
+                <div class="container__cover">
+                    <div class="cover">
+                        <div class="textodetalle">
+                        <div class="svg">
+        <h1>Pulsera Plata&Jade GZ</h1>
+        <table>
+            <tr>
+                <td rowspan="4"><img src="{%static '/app/img/orfebreria1.jpg'%}" alt="Orfebreria#1"></td>
+                <td>
+                    <p>Detalle: La plata también entrega un beneficio a la salud: es naturalmente antimicrobiana y elimina 
+                        todo tipo de gérmenes. Se trata de una característica que adquiere incluso más importancia en estos tiempo de 
+                        pandemia, pues previene el contagio de enfermedades respiratorias por medio de las Joyas. El jade tiene múltiples 
+                        beneficios para la salud, tiene propiedades calmantes, estimula la energía vital y, según la medicina oriental, posee 
+                        cualidades curativas.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Nombre: Pulsera de plata y jade GZ </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Precio: $39.00 US</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Tecnica usada: Aro de plata 925, Jade verde</p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </main>
+
+    </body>
+</html>

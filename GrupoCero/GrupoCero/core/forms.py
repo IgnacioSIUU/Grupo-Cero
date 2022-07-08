@@ -16,19 +16,7 @@ class ContactoForm(forms.ModelForm):
 
 class ArteForm(forms.ModelForm):
     nombre = forms.CharField(min_length=3,max_length=20)
-    imagen = forms.ImageField(required=False)
     precio = forms.IntegerField(min_value=1)
-
-    def clean_nombre(self):
-       nombre=self.cleaned_data["nombre"] 
-       existe = Arte.objects.filter(nombre_iexact=nombre).exists()
-
-       if existe:
-         raise ValidationError("Este nombre ya existe")
-
-       return nombre
-
-
     class Meta:
         model = Arte
         fields= '__all__'

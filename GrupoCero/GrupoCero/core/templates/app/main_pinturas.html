@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Pinturas GZ</title>
+        <title>Pinturas</title>
         
         <link type="text/css" rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
         
@@ -19,7 +19,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
-
+  
     <body>
         <header>
             <div class="container__menu">
@@ -29,7 +29,7 @@
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="{% url 'home' %}">Menu Principal</a></li>    
+                            <li><a href="{% url 'home' %}">Menú Principal</a></li>    
                         </ul>
                     </nav>
                 </div>
@@ -44,10 +44,15 @@
                         <h1>Pinturas GZ</h1>
 
                     <table>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
                         <tr>
                             <td>
-                                <a target="_blank" href="../HTML/Inf_imagen4.html">
-                                    <img src="../IMAGES/elgrito.jpeg" alt="Elgrito" width="300" height="200">
+                                <a target="_blank" href="{% url 'Inf_imagen4' %}">
+                                    <img src="{% static 'app/img/elgrito.jpeg' %}" alt="elgrito" width="300" height="200">
                                 </a>
                             </td>
                             <td>
@@ -57,8 +62,8 @@
 
                         <tr>
                             <td>
-                                <a target="_blank" href="../HTML/Inf_imagen.html">
-                                    <img src="../IMAGES/nocheestrellada.jpg" alt="Nocheestrellada" width="300" height="200">
+                                <a target="_blank" href="{% url 'Inf_imagen' %}">
+                                    <img src="{% static 'app/img/nocheestrellada.jpg' %}" alt="Nocheestrellada" width="300" height="200">
                                 </a>
                             </td>
                             <td>
@@ -68,8 +73,8 @@
 
                         <tr>
                             <td>
-                                <a target="_blank" href="../HTML/Inf_imagen2.html">
-                                    <img src="../IMAGES/ultimacena.jpg" alt="Ultimacena" width="300" height="200">
+                                <a target="_blank" href="{% url 'Inf_imagen2' %}">
+                                    <img src="{% static 'app/img/ultimacena.jpg' %}" alt="Ultimacena" width="300" height="200">
                                 </a>
                             </td>
                             <td>
@@ -78,8 +83,8 @@
 
                         <tr>
                             <td>
-                                <a target="_blank" href="../HTML/Inf_imagen3.html">
-                                    <img src="../IMAGES/venus.jpg" alt="Venus" width="300" height="200">
+                                <a target="_blank" href="{% url 'Inf_imagen3' %}">
+                                    <img src="{% static 'app/img/venus.jpg' %}" alt="Venus" width="300" height="200">
                                 </a>
                             </td>
                             <td>
