@@ -30,16 +30,16 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="#">Menu productos</a>
+                        <li><a href="#">Menú productos</a>
                             <ul>
                                 <li><a href="{% url 'main_pinturas' %}">Pinturas</a></li>
-                                <li><a href="{% url 'main_orfebreria' %}">Orfebreria</a></li>
+                                <li><a href="{% url 'main_orfebreria' %}">Orfebrería</a></li>
                                 <li><a href="{% url 'main_esculturas' %}">Esculturas</a></li>
                             </ul>
                         </li>
                         {%if user.is_authenticated %}
                          <li>
-                            <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                            <a href="{% url 'logout' %}">Cerrar Sesión</a>
                          </li>
                          <li>
                             <a href="#">Hola, {{user.username}}</a>
@@ -51,10 +51,10 @@
                           {% endif%}
                          {% else %}
                          <li>
-                            <a href="{% url 'login' %}">Iniciar Sesion</a>
+                            <a href="{% url 'login' %}">Iniciar Sesión</a>
                          </li>
                          <li>
-                            <a href="{% url 'registro' %}">Registrate aqui</a>
+                            <a href="{% url 'registro' %}">Regístrate aqui</a>
                          </li>
                         {% endif %}
                     </ul>
@@ -77,7 +77,7 @@
                 
                     Amigos clientes no duden en consultarnos, será un placer asesorarlos y ayudarles en lo que necesiten.</p>
 
-                    <a href="{% url 'ConoceMas' %}"><input type="button" value="CONOCE MÁS"></a>
+                   <a href="{% url 'registro' %}"><input type="button" value="CONOCE MÁS"></a>
 
                 </div>
                 
@@ -131,7 +131,7 @@
                 </svg>
                 <div class="container">
                     <div class="carousel-caption text-start">
-                        <h1>ULTIMA CENA</h1>
+                        <h1>ÚLTIMA CENA</h1>
                         <p><a class="btn btn-lg btn-primary" href="{% url 'Inf_imagen2' %}">CLICK PARA VER DETALLES</a></p>
                     </div>
                 </div>

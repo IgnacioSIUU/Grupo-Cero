@@ -55,6 +55,21 @@ def Inf_imagen2(request):
 def Inf_imagen3(request):
     return render (request,'app/Inf_imagen3.html')
 
+def Inf_imagen4(request):
+    return render (request,'app/Inf_imagen4.html')
+
+def orfebreria1(request):
+    return render (request,'main_orfebreria.html')
+
+def orfebreria2(request):
+    return render (request,'main_orfebreria.html')
+
+def orfebreria3(request):
+    return render (request,'main_orfebreria.html')
+
+def orfebreria4(request):
+    return render (request,'main_orfebreria.html')
+
 def main_esculturas(request):
     return render (request,'app/main_esculturas.html')
 
@@ -66,6 +81,9 @@ def escultura1(request):
 
 def escultura2(request):
     return render (request,'app/esculturashtmls/escultura2.html')
+
+def ConoceMas(request):
+    return render (request,'app/ConoceMas.html')
 
 
 @permission_required('core.add_arte')

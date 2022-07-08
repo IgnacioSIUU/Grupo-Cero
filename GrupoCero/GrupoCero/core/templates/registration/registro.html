@@ -40,8 +40,8 @@
                         <form action="" method="POST">
                                 {%csrf_token%}
                                 {{form | crispy}}
-                                <a href="{% url 'home' %}">Volver a la pagina principal</a>|
-                                <a href="{% url 'login' %}">Ir a iniciar sesion</a>
+                                <a href="{% url 'home' %}">Volver a la página principal</a>|
+                                <a href="{% url 'login' %}">Ir a iniciar sesión</a>
                                 <input type="submit" value="REGISTRARTE" class="btn btn-succes float-right">
                         </form>
                     </div>

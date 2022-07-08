@@ -1,3 +1,5 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +7,7 @@
             Pintura 1
         </title>
 
-        <link type="text/css" rel="stylesheet" href="../CSS.css">
+        <link type="text/css" rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,12 +26,12 @@
         <header>
             <div class="container__menu">
                 <div class="logo">
-                    <img src="../IMAGES/LOGO.jpg" alt="">
+                    <img src="{% static '/app/img/LOGO.jpg' %}" alt="">
                 </div>
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="../HTML/Home.html">Menu principal</a></li>               
+                            <li><a href="{% url'home' %}">Menu principal</a></li>               
                         </ul>
                     </nav>
                 </div>
@@ -46,7 +48,7 @@
             
         <tr>
             <td rowspan="5"> 
-                <img src="../IMAGES/1D.jpg" alt="Escritorio">
+                <img src="{% static 'app/img/1D.jpg' %}" alt="Escritorio">
             </td>
         </tr>
         <tr>
