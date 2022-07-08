@@ -22,7 +22,7 @@
     <style>
         body { background-color: #682f97; }
       </style>
-    <title>INICIO DE SESION</title>
+    <title>INICIO DE SESIÓN</title>
 </head>
 <body>
     
@@ -40,8 +40,8 @@
                         <form action="" method="POST">
                                 {%csrf_token%}
                                 {{form | crispy}}
-                                <a href="{% url 'home' %}">Volver a la pagina principal</a>|
-                                <a href="{% url 'registro' %}">Registrate Aqui</a>
+                                <a href="{% url 'home' %}">Volver a la página principal</a>|
+                                <a href="{% url 'registro' %}">Regístrate Aquí</a>
                                 <input type="submit" value="INGRESAR" class="btn btn-succes float-right">
                         </form>
                     </div>

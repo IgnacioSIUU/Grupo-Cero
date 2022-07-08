@@ -55,17 +55,35 @@ def Inf_imagen2(request):
 def Inf_imagen3(request):
     return render (request,'app/Inf_imagen3.html')
 
+def Inf_imagen4(request):
+    return render (request,'app/Inf_imagen4.html')
+
 def main_esculturas(request):
     return render (request,'app/main_esculturas.html')
 
 def main_orfebreria(request):
     return render (request,'app/main_orfebreria.html')
+
+def orfebreria1(request):
+    return render(request,'app/arteshtmls/orfebreriashtml/orfebreria1.html')
+
+def orfebreria2(request):
+    return render(request,'app/arteshtmls/orfebreriashtml/orfebreria2.html')
+
+def orfebreria3(request):
+    return render(request,'app/arteshtmls/orfebreriashtml/orfebreria3.html')
+    
+def orfebreria4(request):
+    return render(request,'app/arteshtmls/orfebreriashtml/orfebreria4.html')
     
 def escultura1(request):
-    return render (request,'app/esculturashtmls/escultura1.html')
+    return render (request,'app/arteshtmls/esculturashtmls/escultura1.html')
 
 def escultura2(request):
-    return render (request,'app/esculturashtmls/escultura2.html')
+    return render (request,'app/arteshtmls/esculturashtmls/escultura2.html')
+
+def ConoceMas(request):
+    return render (request,'app/ConoceMas.html')
 
 
 @permission_required('core.add_arte')
@@ -75,7 +93,7 @@ def agregar_arte(request):
         'form':ArteForm()
     }
     if request.method == 'POST':
-        formulario = ArteForm(data=request.POST, files=request.FILES)
+        formulario = ArteForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
             data["mensaje"] = "PRODUCTO AGREGADO CORRECTAMENTE"
@@ -99,7 +117,7 @@ def mod_arte(request,id):
         'form': ArteForm(instance=Arte)
     }
     if request.method=='POST':
-        formulario=ArteForm(data=request.POST, instance=arte,files=request.FILES)
+        formulario=ArteForm(data=request.POST, instance=arte)
         if formulario.is_valid():
             formulario.save()
             messages.success(request,"MODIFICADO CORRECTAMENTE")
@@ -128,6 +146,45 @@ def registro(request):
             return redirect(to=home)
         data["form"]
     return render(request,'registration/registro.html',data)
+
+@csrf_exempt
+@api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
+def lista_artes(request):
+    if request.method == 'GET':
+        arte = Arte.objects.all()
+        serializer = ArteSerializer(arte,many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = ArteSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors,status==status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
+def detalle_arte(request,id):
+    try:
+        arte= Arte.objects.get(idprod=id)
+    except Arte.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    if request.method == 'GET':
+        serializer = ArteSerializer(arte)
+        return Response(serializer.data)
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = ArteSerializer(arte,data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        arte.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 @csrf_exempt
 @api_view(['GET','POST'])

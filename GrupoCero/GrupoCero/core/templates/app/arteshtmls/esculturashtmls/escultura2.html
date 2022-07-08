@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GZ</title>
+        <title>Esculturas</title>
         
-        <link type="text/css" rel="stylesheet" href="../CSS.css">
+        <link rel="stylesheet" href="{%static '/app/css/CSS.css'%}">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,13 +24,13 @@
         <header>
             <div class="container__menu">
                 <div class="logo">
-                    <img src="../IMAGES/LOGO.jpg" alt="">
+                    <img src="{%static '/app/img/LOGO.jpg'%}">
                 </div>
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a class="a" href="../HTML/main_esculturas.html">Esculturas</a></li>
-                            <li><a href="../HTML/Home.html">Menu principal</a></li>               
+                            <li><a class="a" href="{% url 'main_esculturas' %}">Esculturas</a></li>
+                            <li><a href="{% url 'home' %}">Menu principal</a></li>               
                         </ul>
                     </nav>
                 </div>
@@ -37,15 +38,18 @@
         </header>
 
         <main>
+        
             <div class="container__cover">
                 <div class="cover">
                     <div class="textodetalle">
                     <div class="svg">
-                        <h1>Escultura de perro artesanal</h1>
+                        <h1>
+                        </br>
+                        </br>Escultura de perro artesanal</h1>
         <table>
             
             <tr>
-                <td rowspan="4"><img src="../Imagenes/escultura2.jpg" alt="Escultura#2"></td>
+                <td rowspan="4"><img src="{%static '/app/img/escultura2.jpg'%}" alt="Escultura#2"></td>
             </tr>
             <tr>
                 <td>
@@ -73,6 +77,7 @@
 
             <tr>
                 <td>
+                </br>
                     <p>Tecnica usada: Resina, Pintura</p>
                 </td>
             </tr>

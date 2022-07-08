@@ -9,7 +9,7 @@ integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6ji
 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<title>Contacto</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device=width, initial-scale=1.0">
@@ -19,6 +19,24 @@ integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEUL
 <style>
     body { background-color: #682f97; }
   </style>
+
+<body>
+  <header>
+      <div class="container__menu">
+          <div class="logo">
+              <img src="{%static '/app/img/LOGO.jpg'%}" width="60">
+          </div>
+          <div class="menu">
+              <nav>
+                  <ul>
+                      <li><a href="{% url 'home' %}">Menú Principal</a></li>           
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
+  <br>
+  <br>
   <br>
   <br>
 <div class="row">
@@ -32,12 +50,7 @@ integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEUL
      {{ form | crispy }}
 
      <br>
-     <div class="d-flex justify-content-end">
-          <input type="reset" value="Cancelar" class="btn btn-secondary">
-          &ensp;
-          <button type="submit" id="btnEnviar" class="btn btn-primary">ENVIAR</button>
-     </div>
-
+     <button type="submit" id="btnEnviar" class="btn btn-primary">ENVIAR</button>
      
 
 </form>
